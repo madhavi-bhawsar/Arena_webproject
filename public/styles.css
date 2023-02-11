@@ -1,0 +1,48 @@
+.navbar{
+    display: flex;
+    justify-content: space-between;
+  position: absolute;
+  width: 100%;
+  height: 5.875em;
+  left: 0em;
+  top: 0em;
+  align-items: center;
+  background: #1B425F;
+  }
+
+  .nav-links{
+    margin-right: 2em;
+    flex-direction: row;
+    font-family: 'Brush Script MT';
+    text-decoration-line: underline;
+    font-weight: 400;
+    font-size:  1.625em;
+    color: white;
+  }
+  
+.navheading{
+  padding-left: 1em;
+  padding-right: 4em;
+  left: 0em;
+  font-family: 'Brush Script MT';
+  font-weight: 400;
+  color: white;
+  line-height: 3em;
+  font-size: 5em;
+}
+
+.home{
+  background-color: #F6BEB4;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom:0;
+  right:0;
+}
+.center {
+  display: block;
+  margin-left: auto;
+  margin-top:10em;
+  margin-right: auto;
+  width: 50%;
+}
