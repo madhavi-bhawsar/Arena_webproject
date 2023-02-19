@@ -43,7 +43,7 @@
   font-size: 3em;
   color: #000000;
   margin: 1% 2% 2em;
-  height: 690px;
+  height: 550px;
   width: 96%;
   background: #D9D9D9;
   overflow-y: scroll;
@@ -77,10 +77,10 @@
 }
 
 .grie-container{
-  width: 1365px;
-  height: 650px;
-  margin-top: 7em ;
-  margin-left: 7em;
+  width: 1500px;
+  height: 670px;
+  margin-top: 1em ;
+  margin-left: 4em;
   background: #D9D9D9;
 }
 
@@ -89,34 +89,144 @@
   padding-right: 0.5em;
   font-family: 'Beau Rivage', cursive;
   font-size: 5em;
-  text-align: center;
   color: #000000;
   text-align: left;
+}
+.content{
+    font-family: 'Beau Rivage', cursive;
+    font-size: 2em;
+    color: #000000;
+    text-align: left;
 }
 .grie-content{
   font-family: 'Beau Rivage', cursive;
   font-size: 2em;
   color: #000000;
-  width: 1278px;
-  height: 475px;
+  width: 1378px;
+  height: 525px;
   margin-left:1em ;
   background: #98BABB;
+  overflow-y: scroll;
 }
 
-.flex-row{
+#flex-row{
   display: flex;
 }
 .select-down{
   margin-top: 2em;
   width: 1000px;
-  height: 50px;
+  height: 40px;
   background: #60769D;
+}
+.panel-icons{
+  height: 2.5em;
+  width: 2.5em;
+  margin-left: 0.25em;
 }
 
 #clip-orient{
   margin-top: 2em;
   margin-left: 2em;
   margin-right: 3em;
+}
+
+.welcome{
+width: 1050px;
+height: 500px;
+margin-top: 170px;
+margin-bottom: 50px;
+}
+
+#centre{
+  text-align: center;
+  margin-top: 5.875em;
+  margin-left: 4.75em;
+  height:690px;
+  width: 100%;
+  flex-direction: column;
+  overflow-y: scroll;
+}
+
+.society-pics{
+  width: 1570px;
+  height: 620px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.left-rec{
+  width: 70px;
+  height: 480px;
+  background: #D9D9D9;
+  border-radius: 40px 0px 0px 40px;
+  margin-top: 60px;
+  margin-left: 5%;
+}
+.right-rec{
+  width: 70px;
+  height: 480px;
+  background: #D9D9D9;
+  border-radius: 0px 40px 40px 0px ;
+  margin-top: 60px;
+  margin-right: 5%;
+}
+#left-rec{
+  margin-right:5%;
+}
+.pics{
+  width: 1300px;
+  height: 610px;
+  background: #D9D9D9;
+  border-radius: 40px;
+  margin: 0% 1% 0% 1%;
+}
+#left_pic{
+  margin-top:170px ;
+}
+#right_pic{
+  margin-top:170px ;
+}
+#align{
+  margin-top: 10px;
+  justify-content: center;
+}
+#align_center{
+  margin-bottom: 50px;
+  text-align: center;
+}
+.bottom{
+  margin-top: 140px;
+}
+
+.side-content{
+  margin-left: 5%;
+  width: 90%;
+  display: flex;
+}
+
+#side_box{
+  width: 400px;
+  height: 300px;
+  background-color: #8CA1AE;
+}
+#small-icon{
+  height: 2em;
+  width: 2em;
+  margin: auto;
+}
+.map-icons{
+  height: 6em;
+  width: 6em;
+  margin-left: 5%;
+  margin-top: 30px;
+}
+
+#bg-linear-blue{
+  background: linear-gradient(180deg, #207476 0%, #98BABB 100%);
+  margin-top: 200px;
 }
 
   .nav-links{
@@ -128,6 +238,7 @@
     font-size:  2.25em;
     color: white;
   }
+
   
 .navheading{
   padding-left: 1em;
@@ -146,7 +257,8 @@
   left: 0;
   bottom:0;
   right:0;
-  overflow-y: scroll;
+  width: 100%;
+  height: 100%;
 }
 
 #home-bg{
@@ -164,7 +276,7 @@
 hr {
   border: dotted #6E0851 6px;
   border-bottom: none;
-  width: 4%;
+  width: 7%;
   margin: 100px auto;
 }
 
@@ -185,6 +297,7 @@ hr {
   margin: 20px;
   align-items: center;
 }
+
 
 .orange-card{
   width: 1206px;

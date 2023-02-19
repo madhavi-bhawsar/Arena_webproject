@@ -33,7 +33,7 @@ function My_Blog() {
         </div>
         <div>
         <img src={done} alt="done" className="icons" id="done" ></img>
-          <textarea name="blog-content" rows="4" cols="50" placeholder="Type the blog here" className="blog-content">
+          <textarea name="blog-content"  placeholder="Type the blog here" className="blog-content">
           </textarea>
           </div>
       </div>
