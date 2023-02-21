@@ -7,6 +7,7 @@ import Nav from ".//nav.jsx";
 import Panel from ".//panel.jsx";
 import Home_Cards from ".//home_cards";
 import Shop_Cards from ".//shop_cards.jsx";
+import Authorities from ".//authorities.jsx";
 function Home() {
   return (
     <div>
@@ -14,7 +15,7 @@ function Home() {
         <Nav />
         <div id="flex-row">
           <Panel /> 
-          <div id="centre">
+          <div className="centre">
             <div>
             <img src={welcome} alt="welcome" className="welcome"></img>
             </div>
@@ -28,6 +29,7 @@ function Home() {
             <hr/>
             <Home_Cards />
             <Shop_Cards />
+            <Authorities />
           </div>
         </div>
       </div>

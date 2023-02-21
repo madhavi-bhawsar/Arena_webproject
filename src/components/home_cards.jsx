@@ -12,7 +12,7 @@ function Home_Cards() {
         <div className="right-rec" ></div>
       </div>
       <div>
-        <div className="pics" id="flex-row">
+        <div className="pics" id="card-color">
           <div className="title">
             The Club:
           </div>

@@ -10,13 +10,12 @@ function Navbar() {
             login
           </a>
         </div>
+      <div className="nav-scroll">
         <div classNme="top-container">
           <img src={img} alt="logo" className="center"></img>
         </div>
         <hr />
-        <div className="middle-container" id="box">
-
-        </div>
+        <div className="middle-container" id="box"></div>
         <div className="middle-container">
             <div className="orange-card">
               <div className="card-orange-title">
@@ -35,13 +34,10 @@ function Navbar() {
               </div>
             </div>
             
+          </div>
         </div>
-
-
-
-
+        </div>
       </div>
-    </div>
   );
 }
 export default Navbar;

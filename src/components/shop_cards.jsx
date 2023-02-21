@@ -2,14 +2,17 @@ import React from "react";
 import prev from "./images/previous-button-icon.png";
 import next from "./images/next-button-icon.png";
 import world_map from "./images/world-map-pin-icon.png";
+import up from "./images/select-triangle-square-arrow-bottom-icon.png";
+import down from "./images/select-triangle-square-arrow-bottom-icon - Copy.png";
 function Shop_Cards() {
   return (
-    <div className="society-pics" id="bg-linear-blue">
-        <div id="box" className="title" >
-        Shops and trading Centers:
-        </div>
+    <div id="bg-linear-blue">
       <div>
-        <div className="pics" id="flex-row">
+        <div className="blog-title" >
+        <u>Shops and trading Centers:</u>
+        </div>
+      <div >
+        <div className="pics" id="pic-size">
           <div className="title">
             The Club:
           </div>
@@ -25,7 +28,13 @@ function Shop_Cards() {
               <img src={world_map} alt="locate office" className="map-icons" ></img>
             </div>
           </div>
+          </div>
         </div>
+        <div>
+          <img src={up} alt="prev img" id="small-icon" ></img>
+          <img src={down} alt="next img" id="small-icon" ></img>
+        </div>
+        
       </div>
       
     </div>
