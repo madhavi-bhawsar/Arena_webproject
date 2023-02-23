@@ -25,19 +25,21 @@ function My_Blog() {
             />
           </div>
           <div className="left">
-          <img src={clip} alt="attachment" className="icons"></img>
+            <img src={clip} alt="attachment" className="icons"></img>
           </div>
           <div className="right">
             <img src={profile} alt="profile" className="icons"></img>
           </div>
         </div>
         <div>
-        <img src={done} alt="done" className="icons" id="done" ></img>
-          <textarea name="blog-content"  placeholder="Type the blog here" className="blog-content">
-          </textarea>
-          </div>
+          <img src={done} alt="done" className="icons" id="done"></img>
+          <textarea
+            name="blog-content"
+            placeholder="Type the blog here"
+            className="blog-content"
+          ></textarea>
+        </div>
       </div>
-      
     </div>
   );
 }

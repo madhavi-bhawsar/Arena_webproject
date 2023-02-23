@@ -10,25 +10,30 @@ function Grievance_Page() {
       <div className="home" id="blog-bg">
         <Nav />
         <div id="centre">
-        <Panel />
-        <div className="grie-container">
-          <div id="flex-row">
-            <div className="title">To: </div>
-            <div className="select-down">
-              <img src={down} alt="show" className="icons"></img>
+          <Panel />
+          <div className="grie-container">
+            <div id="flex-row">
+              <div className="title">To: </div>
+              <div className="select-down">
+                <img src={down} alt="show" className="icons"></img>
+              </div>
+              <img
+                src={clip}
+                alt="add"
+                className="icons"
+                id="clip-orient"
+              ></img>
             </div>
-            <img src={clip} alt="add" className="icons" id="clip-orient"></img>
-          </div>
-        <div>
-            <textarea
-              name="grie-content"
-              placeholder="Type the Problem Here"
-              className="grie-content"
-            ></textarea>
-            <img src={done} alt="done" className="icons" ></img>
+            <div id="align">
+              <textarea
+                name="grie-content"
+                placeholder="Type the Problem Here"
+                className="grie-content"
+              ></textarea>
+              <img src={done} alt="done" className="icons"></img>
+            </div>
           </div>
         </div>
-      </div>
       </div>
     </div>
   );
