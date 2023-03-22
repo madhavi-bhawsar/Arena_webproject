@@ -1,5 +1,36 @@
 import React from "react";
-import star from "./images/star-icon.png";
+import Left_Authorities_card from "./props_cards/Left_Authorities_Card.jsx";
+import Right_Authorities_card from "./props_cards/Right_Authorities_Card.jsx";
+import authorities_doc from "../authorities_doc.jsx";
+
+function create_authority(term) {
+  var k =term.id
+  if(k%2===0){
+    return (
+      <Left_Authorities_card
+        key={term.id}
+        position={term.position}
+        content={term.content}
+        name={term.name}
+        contact={term.contact}
+        ranking={term.ranking}
+        image={term.image}
+      />
+    );
+  }else{
+    return (
+      <Right_Authorities_card
+      key={term.id}
+      position={term.position}
+      content={term.content}
+      name={term.name}
+      contact={term.contact}
+      ranking={term.ranking}
+      image={term.image}
+      />
+    );
+  }
+}
 
 function Authorities() {
   return (
@@ -10,50 +41,9 @@ function Authorities() {
       </div>
       <hr />
       <div className="left-centre">
-        <div id="left-authority-card">
-          <div className="person">
-            <div className="circle"></div>
-            <div>
-              <img src={star} alt="prev img" id="small-icon"></img>
-            </div>
-            <div className="content">Narayan Naidu</div>
-            <div className="card-fill">9783232232</div>
-          </div>
-          <div className="card-fill">
-            <div className="title" id="align_center">
-              Secretory
-            </div>
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry's standard dummy text
-            ever since the 1500s, when an unknown printer took a galley of type
-            and scrambled it to make a type specimen book. It has survived not
-            only five centuries, but also the leap into electronic typesetting,
-            remaining essentially unchanged. It was popularised in the 1960s
-            with the release of Letraset sheets containing Lorem I
-          </div>
-        </div>
-        <div id="right-authority-card">
-          <div className="card-fill">
-            <div className="title" id="align_center">
-              Treasurer
-            </div>
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry's standard dummy text
-            ever since the 1500s, when an unknown printer took a galley of type
-            and scrambled it to make a type specimen book. It has survived not
-            only five centuries, but also the leap into electronic typesetting,
-            remaining essentially unchanged. It was popularised in the 1960s
-            with the release of Letraset sheets containing Lorem I
-          </div>
-          <div className="person">
-            <div className="circle"></div>
-            <div>
-              <img src={star} alt="prev img" id="small-icon"></img>
-            </div>
-            <div className="content">Damodar yele</div>
-            <div className="card-fill">9783232232</div>
-          </div>
-        </div>
+      {authorities_doc.map(create_authority)}
+
+        
       </div>
     </div>
   );

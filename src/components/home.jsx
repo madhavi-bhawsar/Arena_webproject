@@ -4,8 +4,8 @@ import left_pic from "./images/curved-arrow-left-green-icon.png";
 import right_pic from "./images/curved-arrow-right-green-icon.png";
 import Nav from ".//nav.jsx";
 import Panel from ".//panel.jsx";
-import Home_Cards from ".//home_cards";
-import Shop_Cards from ".//shop_cards.jsx";
+import Home_Cards from "./home_cards";
+import Shop_Cards from "./shop_cards.jsx";
 import Authorities from ".//authorities.jsx";
 function Home() {
   return (

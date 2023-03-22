@@ -7,6 +7,7 @@ import Home from "./components/home";
 import Login from "./components/login";
 import Guide from "./components/guide";
 import Events_View from "./components/events_view";
+import Blog_View from "./components/blog_view";
 function App() {
   return (
     <Router>
@@ -18,6 +19,7 @@ function App() {
         <Route exact path="/login" element={<Login />}></Route>
         <Route exact path="/guide" element={<Guide />}></Route>
         <Route exact path="/events_view" element={<Events_View />}></Route>
+        <Route exact path="/Blog_view" element={<Blog_View />}></Route>
       </Routes>
     </Router>
   );

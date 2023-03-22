@@ -4,6 +4,30 @@ import green_cicle from "./images/green-circle-icon.png";
 import right_triangle from "./images/caret-right-icon.png";
 import left_triangle from "./images/caret-left-icon.png";
 import lower from "./images/lower-container.png";
+import Features_Guide_Orange_Card from "./props_cards/Features_Guide_Orange_Card.jsx";
+import Features_Guide_Pink_Card from "./props_cards/Features_Guide_Pink_Card.jsx";
+import features_guide from "../features_guide.js";
+
+function create_guide(guideterm) {
+  var k =guideterm.id
+  if(k%2===0){
+    return (
+      <Features_Guide_Orange_Card
+        key={guideterm.id}
+        heading={guideterm.heading}
+        content={guideterm.content}
+      />
+    );
+  }else{
+    return (
+      <Features_Guide_Pink_Card
+        key={guideterm.id}
+        heading={guideterm.heading}
+        content={guideterm.content}
+      />
+    );
+  }
+}
 function Navbar() {
   return (
     <div>
@@ -52,26 +76,10 @@ function Navbar() {
             <u> Features & Guide :</u>
           </div>
           <hr />
-          <div className="orange-card" id="card">
-            <div className="card-orange-title" id="card-title">
-              :What we have in guide
-            </div>
-            <div className="card-fill">
-              Managing the society can be a tricky task. The management requires
-              the communication between all the members of the group efficiently
-            </div>
-            <a href="">Read more...</a>
-          </div>
-          <div className="pink-card" id="card">
-            <div className="card-pink-title" id="card-title">
-              What we have in guide:
-            </div>
-            <div className="card-fill">
-              Managing the society can be a tricky task. The management requires
-              the communication between all the members of the group efficiently
-            </div>
-            <a href="">Read more...</a>
-          </div>
+          
+          {features_guide.map(create_guide)}
+
+          
           <img src={lower} alt="information" className="lower"></img>
         </div>
       </div>

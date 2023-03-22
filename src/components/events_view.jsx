@@ -30,9 +30,11 @@ function Events_View() {
             id="event_right_pic"
           ></img>
         </div>
-        <img src={emoji} alt="react" className="icons" id="event_left_pic"></img>
-        <input type="text" placeholder="comment" className="comment" />
-        <img src={send} alt="send" className="icons" id="event_right_pic"></img>
+        <div id="flex-row" className="comment">
+          <img src={emoji} alt="react" id="small-icon" ></img>
+          <input type="text" placeholder="comment" className="comment_box"/>
+          <img src={send} alt="send" id="small-icon" ></img>
+        </div>
       </div>
       <img
         src={event_arrow_right}

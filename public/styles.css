@@ -203,6 +203,7 @@
 #align {
   margin-top: 10px;
   justify-content: center;
+  text-align: center;
 }
 #align_center {
   margin-top: 20px;
@@ -515,11 +516,21 @@ hr {
 }
 .comment{
   position: absolute;
-  width: 80%;
+  width: 86%;
   height: 5%;
-  bottom: 3em;
   left: 7%;
-  background: #C0D8DF;
-  align-items: center;
-  justify-content: space-between;
+  bottom: 3em;
+  background: rgba(192, 216, 223, 0.54);
+  border-radius: 30px;
+}
+.comment_box{
+  width: 85%;
+  background: rgba(192, 216, 223, 0.54);
+  border-color: rgba(192, 216, 223, 0.54);
+}
+.book{
+  color: green;
+}
+.like{
+  color: rgb(224, 44, 44);
 }
