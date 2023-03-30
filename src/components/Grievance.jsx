@@ -4,6 +4,7 @@ import down from "./images/double-arrow-bottom-icon.png";
 import done from "./images/done-icon.png";
 import Nav from ".//nav.jsx";
 import Panel from ".//panel.jsx";
+import { Link } from 'react-router-dom';
 function Grievance_Page() {
   return (
     <div>

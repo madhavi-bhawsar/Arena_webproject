@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from 'react-router-dom';
 import prev from "./images/previous-button-icon.png";
 import next from "./images/next-button-icon.png";
 import world_map from "./images/world-map-pin-icon.png";

@@ -5,6 +5,7 @@ import emoji from "./images/smiling-line-icon.png";
 import event_arrow_left from "./images/thunderbolt-icon-left.png";
 import event_arrow_right from "./images/thunderbolt-icon-right.png";
 import send from "./images/paper-plane-icon.png";
+import { Link } from 'react-router-dom';
 function Events_View() {
   return (
     <div>
@@ -23,12 +24,14 @@ function Events_View() {
             id="event_left_pic"
           ></img>
           <div className="title">The group name</div>
+          <Link to="/home">
           <img
             src={home}
             alt="home"
             className="icons"
             id="event_right_pic"
           ></img>
+          </Link>
         </div>
         <div id="flex-row" className="comment">
           <img src={emoji} alt="react" id="small-icon" ></img>

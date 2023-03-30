@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from 'react-router-dom';
 import home from "./images/home-button-icon.png";
 import event from "./images/marketing-automation-icon.png";
 import blog from "./images/blog-icon.png";
@@ -9,7 +10,7 @@ import profile from "./images/person-profile-icon.png";
 function Nav_Panel() {
   return (
     <div className="home" id="blog-bg">
-      <div className="navbar" id="home-nav">
+      <div className="navibar" id="home-nav">
         <h2 className="navheading">Arena</h2>
         <div className="right">
           <img src={profile} alt="profile" className="panel-icons"></img>
@@ -17,7 +18,8 @@ function Nav_Panel() {
       </div>
       <div className="left-panel">
         <div id="panel">
-          <img src={home} alt="welcome-page" className="icons"></img>
+        <Link to="/home">
+          <img src={home} alt="welcome-page" className="icons"></img></Link>
         </div>
         <div id="panel">
           <img src={event} alt="events" className="panel-icons"></img>

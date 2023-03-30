@@ -6,7 +6,7 @@ function Guide() {
   return (
     <div>
       <div className="home" id="guide-bg">
-        <div className="navbar" id="home-nav">
+        <div className="navibar" id="home-nav">
           <h2 className="navheading">Arena</h2>
           <a href="" className="nav-links">
             login

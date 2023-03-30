@@ -4,17 +4,18 @@ import prev from "./images/previous-button-icon.png";
 import clip from "./images/paperclip-icon.png";
 import profile from "./images/person-profile-icon.png";
 import done from "./images/done-icon.png";
+import { Link } from 'react-router-dom';
 
 function My_Blog() {
   return (
     <div>
       <div className="home" id="blog-bg">
-        <div className="navbar" id="blog-nav">
+        <div className="navibar" id="blog-nav">
           <div className="left">
             <img src={prev} alt="previous page" className="icons"></img>
           </div>
           <div className="right">
-            <img src={home} alt="home" className="icons"></img>
+          <Link to="/home"><img src={home} alt="home" className="icons"></img></Link>
           </div>
 
           <div>
@@ -24,15 +25,25 @@ function My_Blog() {
               className="blog-title"
             />
           </div>
-          <div className="left">
+          <img src={done} alt="done" id="done"></img>
+          <div >
             <img src={clip} alt="attachment" className="icons"></img>
           </div>
           <div className="right">
             <img src={profile} alt="profile" className="icons"></img>
           </div>
         </div>
+
+        <div className="blog-scroll">
         <div>
-          <img src={done} alt="done" className="icons" id="done"></img>
+            <input
+              type="text"
+              placeholder="Type summary qoute( max 200 char)"
+              className="blog_summary"
+              maxLength={200}
+            />
+          </div>
+          
           <textarea
             name="blog-content"
             placeholder="Type the blog here"
