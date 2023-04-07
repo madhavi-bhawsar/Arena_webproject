@@ -69,6 +69,10 @@
 //     );
 //   }
 // }
+
+
+
+
 import React from "react";
 import Carousel from "react-elastic-carousel";
 
@@ -80,10 +84,10 @@ const breakPoints = [
   { width: 1200, itemsToShow: 4 },
 ];
 
-function events() {
+function elastic_carousel() {
   return (
     <>
-      <h1 style={{ textAlign: "center" }}>Example to setup your carousel in react</h1>
+      <h2 className="content"> Trending </h2>
       <div className="App">
         <Carousel breakPoints={breakPoints}>
           <div>One</div>
@@ -99,5 +103,4 @@ function events() {
     </>
   );
 }
-
-export default events;
+export default elastic_carousel;
