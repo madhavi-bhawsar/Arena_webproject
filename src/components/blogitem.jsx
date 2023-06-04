@@ -4,6 +4,7 @@ import prev from "./images/previous-button-icon.png";
 import CarouselComponent from "./carousels_vertical.jsx";
 import blog from "../blog.jsx";
 import { Link } from "react-router-dom";
+import flower from "./images/flower-4148707_1280.webp";
 
 function BlogView() {
   const [mark, setmark] = useState(0),
@@ -57,7 +58,7 @@ function BlogView() {
         <div className="blog-scroll">
           <div className="quote-container">
             <img
-              src="https://images.unsplash.com/photo-1595113316349-9fa4eb24f884?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTd8fHBob3RvJTIwZnJhbWV8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60"
+              src={flower}
               className="imgnav"
               alt="title"
             />

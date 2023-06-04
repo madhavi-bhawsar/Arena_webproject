@@ -10,6 +10,7 @@ import Events_View from "./components/events_view";
 import Events from "./components/event";
 import Blog_View from "./components/blogitem";
 import Blog from "./components/blogtrial";
+import Demo from "./components/demo";
 import 'bootstrap/dist/css/bootstrap.min.css';
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
         <Route exact path="/event" element={<Events />}></Route>
         <Route exact path="/Blogview" element={<Blog_View />}></Route>
         <Route exact path="/Blog" element={<Blog />}></Route>
+        <Route exact path="/demo" element={<Demo />}></Route>
       </Routes>
     </Router>
   );
