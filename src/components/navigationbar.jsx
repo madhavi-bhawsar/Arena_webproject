@@ -6,7 +6,7 @@ import left_triangle from "./images/caret-left-icon.png";
 import lower from "./images/lower-container.png";
 import Features_Guide_Orange_Card from "./props_cards/Features_Guide_Orange_Card.jsx";
 import Features_Guide_Pink_Card from "./props_cards/Features_Guide_Pink_Card.jsx";
-import features_guide from "../features_guide.js";
+import features_guide from "../features_guide.jsx";
 
 function create_guide(guideterm) {
   var k = guideterm.id;

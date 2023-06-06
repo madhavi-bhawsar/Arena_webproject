@@ -34,7 +34,7 @@ function create_authority(term) {
 
 function Authorities() {
   return (
-    <div>
+    <div style={{marginBottom:"2em"}}>
       <hr />
       <div className="title" id="align_center">
         <u> Authorities: </u>

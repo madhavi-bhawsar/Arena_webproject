@@ -7,6 +7,7 @@ import Panel from ".//panel.jsx";
 import Home_Cards from "./home_cards";
 import Shop_Cards from "./shop_cards.jsx";
 import Authorities from ".//authorities.jsx";
+import Slide_carousel from "./slide_carousel";
 function Home() {
   return (
     <div>
@@ -18,7 +19,7 @@ function Home() {
             <div>
               <img src={welcome} alt="welcome" className="welcome"></img>
             </div>
-            <div className="society-pics" id="flex-row">
+            {/* <div className="society-pics" id="flex-row">
               <div className="left-rec">
                 <img
                   src={left_pic}
@@ -36,7 +37,11 @@ function Home() {
                   id="right_pic"
                 ></img>
               </div>
+            </div> */}
+            <div classname="carousel_container_home">
+              <Slide_carousel/>
             </div>
+            
             <hr />
             <div className="title" id="align_center">
               <u> Facilities we have :</u>

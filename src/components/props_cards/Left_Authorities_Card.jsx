@@ -12,7 +12,7 @@ function Left_Authorities_card(props) {
             <div className="card-fill">{props.contact}</div>
           </div>
           <div className="card-fill">
-            <div className="title" id="align_center">
+            <div style={{fontFamily:"monospace" , fontSize:"2em"}} id="align_center">
             {props.position}
             </div>
             {props.content}

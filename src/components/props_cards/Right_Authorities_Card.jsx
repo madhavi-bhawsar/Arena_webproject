@@ -4,7 +4,7 @@ function Right_Authorities_card(props) {
     return (
         <div id="right-authority-card">
           <div className="card-fill">
-            <div className="title" id="align_center">
+            <div style={{fontFamily:"monospace" , fontSize:"2em"}}  id="align_center">
             {props.position}
             </div>
             {props.content}

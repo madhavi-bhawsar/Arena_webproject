@@ -10,7 +10,7 @@ import Events_View from "./components/events_view";
 import Events from "./components/event";
 import Blog_View from "./components/blogitem";
 import Blog from "./components/blogtrial";
-import Demo from "./components/demo";
+import Demo from "./components/slide_carousel";
 import 'bootstrap/dist/css/bootstrap.min.css';
 function App() {
   return (
