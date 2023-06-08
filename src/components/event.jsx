@@ -52,7 +52,7 @@ const Events = () => {
               href={`#${category.toLowerCase()}`}
               style={{ textDecoration: "none", color: "inherit" }}
             >
-              <div style={{ fontSize: "1.5em", fontFamily: "monospace"}}>
+              <div style={{ fontSize: "1.5em", fontFamily: "monospace" }}>
                 {category}
               </div>
             </a>
@@ -69,7 +69,8 @@ const Events = () => {
                   alt={item.title}
                   style={{ height: "8em" }}
                 />
-                {item.title}
+                <b>{item.title}</b>
+                {item.date}
               </div>
             </div>
           ))}
@@ -94,7 +95,8 @@ const Events = () => {
                         alt={event.title}
                         style={{ height: "8em" }}
                       />
-                      {event.title}
+                      <b>{event.title}</b>
+                      {event.date}
                     </div>
                   ))}
                 </div>

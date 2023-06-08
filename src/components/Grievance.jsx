@@ -4,26 +4,29 @@ import down from "./images/double-arrow-bottom-icon.png";
 import done from "./images/done-icon.png";
 import Nav from ".//nav.jsx";
 import Panel from ".//panel.jsx";
-import { Link } from 'react-router-dom';
 function Grievance_Page() {
   return (
     <div>
-      <div className="home" id="blog-bg">
+      <div id="blog-bg">
         <Nav />
         <div id="centre">
           <Panel />
           <div className="grie-container">
-            <div id="flex-row">
-              <div className="title">To: </div>
-              <div className="select-down">
-                <img src={down} alt="show" className="icons"></img>
+            <div id="flex-row" style={{ padding: "2%" }}>
+              <h4>To:</h4>
+              <div>
+                <select
+                  id="flex-row"
+                  className="comment"
+                  style={{ width: "80%", marginLeft: "3em" }}
+                >
+                  <option value="">Select a recipient</option>
+                  <option value="person1">Person 1</option>
+                  <option value="person2">Person 2</option>
+                  <option value="person3">Person 3</option>
+                  {/* Add more options as needed */}
+                </select>
               </div>
-              <img
-                src={clip}
-                alt="add"
-                className="icons"
-                id="clip-orient"
-              ></img>
             </div>
             <div id="align">
               <textarea

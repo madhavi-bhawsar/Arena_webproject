@@ -1,3 +1,4 @@
+
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navigationbar from "./components/navigationbar";
@@ -11,6 +12,9 @@ import Events from "./components/event";
 import Blog_View from "./components/blogitem";
 import Blog from "./components/blogtrial";
 import Demo from "./components/slide_carousel";
+import Payments from "./components/payments";
+import Paying from "./components/paying";
+import Test from "./components/test";
 import 'bootstrap/dist/css/bootstrap.min.css';
 function App() {
   return (
@@ -27,6 +31,9 @@ function App() {
         <Route exact path="/Blogview" element={<Blog_View />}></Route>
         <Route exact path="/Blog" element={<Blog />}></Route>
         <Route exact path="/demo" element={<Demo />}></Route>
+        <Route exact path="/payments" element={<Payments />}></Route>
+        <Route exact path="/paying" element={<Paying />}></Route>
+        <Route exact path="/test" element={<Test />}></Route>
       </Routes>
     </Router>
   );

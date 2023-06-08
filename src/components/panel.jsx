@@ -26,7 +26,9 @@ function Panel() {
         </Link>
       </div>
       <div id="panel">
-        <img src={pay} alt="payment" className="panel-icons"></img>
+        <Link to="/payments">
+          <img src={pay} alt="payment" className="panel-icons"></img>
+        </Link>
       </div>
       <div id="panel">
         <Link to="/Grievance">
