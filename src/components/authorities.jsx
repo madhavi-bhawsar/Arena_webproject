@@ -1,49 +1,38 @@
 import React from "react";
-import Left_Authorities_card from "./props_cards/Left_Authorities_Card.jsx";
-import Right_Authorities_card from "./props_cards/Right_Authorities_Card.jsx";
 import authorities_doc from "../authorities_doc.jsx";
-
-function create_authority(term) {
-  var k =term.id
-  if(k%2===0){
-    return (
-      <Left_Authorities_card
-        key={term.id}
-        position={term.position}
-        content={term.content}
-        name={term.name}
-        contact={term.contact}
-        ranking={term.ranking}
-        image={term.image}
-      />
-    );
-  }else{
-    return (
-      <Right_Authorities_card
-      key={term.id}
-      position={term.position}
-      content={term.content}
-      name={term.name}
-      contact={term.contact}
-      ranking={term.ranking}
-      image={term.image}
-      />
-    );
-  }
-}
 
 function Authorities() {
   return (
-    <div style={{marginBottom:"2em"}}>
+    <div style={{ marginBottom: "2em" }}>
       <hr />
       <div className="title" id="align_center">
         <u> Authorities: </u>
       </div>
       <hr />
       <div className="left-centre">
-      {authorities_doc.map(create_authority)}
-
-        
+        {authorities_doc.map((authority, index) => {
+          const isEven = index % 2 === 0;
+          const cardId = isEven ? "left-authority-card" : "right-authority-card";
+          return (
+            <div id={cardId}>
+              <div className="person">
+                <div className="circle"></div>
+                <div id="align">{authority.ranking}</div>
+                <div className="content">{authority.name}</div>
+                <div className="card-fill">{authority.contact}</div>
+              </div>
+              <div className="card-fill">
+                <div
+                  style={{ fontFamily: "monospace", fontSize: "2em" }}
+                  id="align_center"
+                >
+                  {authority.position}
+                </div>
+                {authority.content}
+              </div>
+            </div>
+          );
+        })}
       </div>
     </div>
   );

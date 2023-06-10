@@ -9,7 +9,7 @@ function Payments() {
   const currentMonth = new Date().getMonth() + 1;
   const navigate = useNavigate(); 
 
-  const [paymentList, setPaymentList] = useState([
+  const [paymentList] = useState([
     // Add monthly entries for upcoming months in the current year
     ...Array(12 - currentMonth).fill().map((_, index) => ({
       pay_for: `society monthly maintenance (Month ${currentMonth + index + 1})`,
@@ -19,19 +19,19 @@ function Payments() {
     })),
     {
       pay_for: "water yearly expenses",
-      due_date: "31/12/23",
+      due_date: `31/12/${currentYear}`,
       amount: 5000,
       payed: false
     },
     {
       pay_for: "garbage yearly maintenance",
-      due_date: "31/12/23",
+      due_date: `31/12/${currentYear}`,
       amount: 1000,
       payed: false
     },
     {
       pay_for: "cultural events yearly expenses",
-      due_date: "31/12/23",
+      due_date: `31/12/${currentYear}`,
       amount: 1000,
       payed: false
     },

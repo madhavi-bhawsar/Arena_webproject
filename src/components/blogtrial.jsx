@@ -1,5 +1,5 @@
 import React from 'react';
-import Vid_nav from './vid_nav.jsx';
+import Vid_nav from './blog_nav.jsx';
 import blogPosts from '../blog.jsx';
 const Posts = () => {
   

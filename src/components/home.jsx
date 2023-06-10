@@ -6,7 +6,6 @@ import Nav from ".//nav.jsx";
 import Panel from ".//panel.jsx";
 import Home_Cards from "./home_cards";
 import Shop_Cards from "./shop_cards.jsx";
-import Authorities from ".//authorities.jsx";
 import Slide_carousel from "./slide_carousel";
 function Home() {
   return (
@@ -49,7 +48,6 @@ function Home() {
             <hr />
             <Home_Cards />
             <Shop_Cards />
-            <Authorities />
           </div>
         </div>
       </div>

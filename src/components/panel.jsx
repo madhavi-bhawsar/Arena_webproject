@@ -40,7 +40,9 @@ function Panel() {
         </Link>
       </div>
       <div id="panel">
-        <img src={vote} alt="vote-campaign" className="panel-icons"></img>
+        <Link to="/election">
+          <img src={vote} alt="vote-campaign" className="panel-icons"></img>
+        </Link>
       </div>
     </div>
   );

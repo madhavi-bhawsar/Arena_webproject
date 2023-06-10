@@ -6,7 +6,8 @@ const Navbar = () => {
   return (
     <nav className='videonav'>
       <ReactPlayer
-        url="https://player.vimeo.com/external/428974406.sd.mp4?s=2949f077e0708537590b3e5fbbdfa4bfd7230a91&profile_id=164&oauth2_token_id=57447761"
+        // url="https://player.vimeo.com/external/428974406.sd.mp4?s=2949f077e0708537590b3e5fbbdfa4bfd7230a91&profile_id=164&oauth2_token_id=57447761"
+        url="https://player.vimeo.com/external/384761655.sd.mp4?s=383ab4dbc773cd0d5ece3af208d8f963368f67e4&profile_id=164&oauth2_token_id=57447761"
         playing
         loop
         muted

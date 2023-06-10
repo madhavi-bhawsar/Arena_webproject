@@ -15,6 +15,12 @@ import Demo from "./components/slide_carousel";
 import Payments from "./components/payments";
 import Paying from "./components/paying";
 import Test from "./components/test";
+import Election from "./components/election";
+import Campaign from "./components/elect_Campaign";
+import Vote from "./components/elect_vote";
+import Current from "./components/elect_current";
+import Authorities from "./components/authorities";
+import Results from "./components/elect_results";
 import 'bootstrap/dist/css/bootstrap.min.css';
 function App() {
   return (
@@ -34,6 +40,12 @@ function App() {
         <Route exact path="/payments" element={<Payments />}></Route>
         <Route exact path="/paying" element={<Paying />}></Route>
         <Route exact path="/test" element={<Test />}></Route>
+        <Route exact path="/election" element={<Election />}></Route>
+        <Route exact path="/campaign" element={<Campaign />}></Route>
+        <Route exact path="/vote" element={<Vote />}></Route>
+        <Route exact path="/current" element={<Current />}></Route>
+        <Route exact path="/authorities" element={<Authorities />}></Route>
+        <Route exact path="/results" element={<Results />}></Route>
       </Routes>
     </Router>
   );
