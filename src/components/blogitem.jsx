@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import home from "./images/home-icon.png";
 import prev from "./images/previous-button-icon.png";
-import CarouselComponent from "./carousels_vertical.jsx";
 import blog from "../blog.jsx";
 import { Link } from "react-router-dom";
-import flower from "./images/flower-4148707_1280.webp";
+import society_images from "../society_pics.jsx";
+import ImageViewer from "../carousel_image.jsx";
 
 function BlogView() {
   const [mark, setmark] = useState(0),
@@ -56,24 +56,16 @@ function BlogView() {
           </div>
         </div>
         <div className="blog-scroll">
-          <div className="quote-container">
-            <img
-              src={flower}
-              className="imgnav"
-              alt="title"
-            />
-            <div className="blog_quote">
-              "the qoute to written is given over here....sdzvhgcb webjdsyuh bew
-              vybdcbq gvuyax sc swbcvduvxzg as cbdvxd vscbdv"
+          <div>
+            <div
+              style={{
+                margin: "10px",
+                float: "left",
+              }}
+            >
+              <ImageViewer images={society_images} />
             </div>
           </div>
-
-          <div className="carousel_blog">
-            <CarouselComponent />
-          </div>
-          <hr></hr>
-
-          <hr></hr>
           <div className="blog_text">
             t is a long established fact that a reader will be distracted by the
             readable content of a page when looking at its layout. The point of
@@ -84,19 +76,16 @@ function BlogView() {
             and a search for 'lorem ipsum' will uncover many web sites still in
             their infancy. Various versions have evolved over the years,
             sometimes by accident, sometimes on purpose (injected humour and the
-            like). 
-            t is a long established fact that a reader will be d
-            istracted
-            by the readable con
-            tent of a page when looking at its layout. The
-            point of using Lorem Ipsum is that it has a more-or-less normal
-            distribution of letters, as opposed to using 'Content here, content
-            here', making it look like readable English. Many desktop publishing
-            packages and web page editors now use Lorem Ipsum as their default
-            model text, and a search for 'lorem ipsum' will uncover many web
-            sites still in their infancy. Various versions have evolved over the
-            years, sometimes by accident, sometimes on purpose (injected humour
-            and the like)
+            like). t is a long established fact that a reader will be d
+            istracted by the readable con tent of a page when looking at its
+            layout. The point of using Lorem Ipsum is that it has a more-or-less
+            normal distribution of letters, as opposed to using 'Content here,
+            content here', making it look like readable English. Many desktop
+            publishing packages and web page editors now use Lorem Ipsum as
+            their default model text, and a search for 'lorem ipsum' will
+            uncover many web sites still in their infancy. Various versions have
+            evolved over the years, sometimes by accident, sometimes on purpose
+            (injected humour and the like)
           </div>
           <hr></hr>
         </div>

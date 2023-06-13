@@ -1,10 +1,22 @@
-import React, { useState } from "react";
+import React, { useState,useEffect } from "react";
 import { Link } from "react-router-dom";
 import Nav from "./nav.jsx";
 import Panel from "./panel.jsx";
-import candidates from "../candidates.jsx";
 
 function Vote() {
+  const [candidates, setNotes] = useState([]);
+
+  useEffect(() => {
+    fetch('/candidates')
+      .then((res) => {
+        if (res.ok) {
+          return res.json();
+        }
+      })
+      .then((jsonRes) => setNotes(jsonRes))
+      .catch((error) => console.error(error));
+  }, []);
+  
   const [selectedPosition, setSelectedPosition] = useState(null);
   const [showUniquePositions, setShowUniquePositions] = useState(true);
   const [selectedCandidate, setSelectedCandidate] = useState(null);
@@ -69,7 +81,7 @@ function Vote() {
           <div>
             <div id="side_box">
               {/* Render the image */}
-              <img src={candidate.pic} alt="candidate picture" />
+              <img src={candidate.pic} alt="candidate_picture" />
             </div>
             {voted ? (
               <div className="thanks-message">Thanks for voting!</div>
@@ -183,7 +195,7 @@ function Vote() {
                         }}
                         key={candidate.id}
                       >
-                        <img src={candidate.pic} alt="candidate picture" />
+                        <img src={candidate.pic} alt="candidate_picture" />
                         <div className="content">{candidate.name}</div>
                         <b>{candidate.position}</b>
                         <button

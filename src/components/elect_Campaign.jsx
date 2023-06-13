@@ -1,8 +1,7 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import Nav from "./nav.jsx";
 import Panel from "./panel.jsx";
-import candidates from "../candidates.jsx";
 import Carousel from "react-elastic-carousel";
 
 const breakPoints = [
@@ -13,6 +12,19 @@ const breakPoints = [
 ];
 
 function Campaign() {
+  const [candidates, setNotes] = useState([]);
+
+  useEffect(() => {
+    fetch('/candidates')
+      .then((res) => {
+        if (res.ok) {
+          return res.json();
+        }
+      })
+      .then((jsonRes) => setNotes(jsonRes))
+      .catch((error) => console.error(error));
+  }, []);
+
   const [selectedPosition, setSelectedPosition] = useState(null);
   const [showUniquePositions, setShowUniquePositions] = useState(true);
 
@@ -34,6 +46,7 @@ function Campaign() {
       setShowUniquePositions(option === "campaign");
     }
   };
+
 
   return (
     <div>
@@ -114,7 +127,7 @@ function Campaign() {
                         }}
                       >
                         <img
-                          src={candidate.image}
+                          src={candidate.pic}
                           alt={candidate.name}
                           style={{ height: "8em" }}
                         />
@@ -147,7 +160,8 @@ function Campaign() {
                               {/* Render the image */}
                               <img
                                 src={candidate.pic}
-                                alt="candidate picture"
+                                alt="candidate"
+                                style={{width:"300px", height:"300px"}}
                               />
                             </div>
                           </div>

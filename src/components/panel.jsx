@@ -5,6 +5,7 @@ import blog from "./images/blog-icon.png";
 import pay from "./images/payroll-salary-icon.png";
 import grievance from "./images/email-envelop-open-icon.png";
 import vote from "./images/ballot-box-voting-icon.png";
+import current from "./images/current.png";
 import { Link } from "react-router-dom";
 
 function Panel() {
@@ -42,6 +43,11 @@ function Panel() {
       <div id="panel">
         <Link to="/election">
           <img src={vote} alt="vote-campaign" className="panel-icons"></img>
+        </Link>
+      </div>
+      <div id="panel">
+        <Link to="/current">
+        <img src={current} alt="authority-result" style={{width:"2em", height:"2em", margin:"7px"}}></img>
         </Link>
       </div>
     </div>

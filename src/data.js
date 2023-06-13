@@ -1,4 +1,25 @@
-const candidates = [
+const { MongoClient } = require('mongodb');
+
+const uri = 'mongodb+srv://bhawsarmadhavi:H6dHoeejJmm4Im5Q@cluster0.0cdsgi1.mongodb.net/?retryWrites=true&w=majority';
+
+async function insertDocuments(data) {
+  const client = new MongoClient(uri);
+
+  try {
+    await client.connect();
+    const db = client.db('arena');
+    const collection = db.collection('candidates');
+    const result = await collection.insertMany(data);
+    console.log('Documents inserted:', result.insertedCount);
+  } catch (error) {
+    console.error('Error inserting documents:', error);
+  } finally {
+    await client.close();
+  }
+}
+
+// Example data to be inserted
+const data=[
   {
     id: 0,
     name: "Person1",
@@ -270,4 +291,6 @@ const candidates = [
     pic:"https://images.unsplash.com/photo-1511367461989-f85a21fda167?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1331&q=80",
   },
 ];
-export default candidates;
+
+// Call the insertDocuments function
+insertDocuments(data);

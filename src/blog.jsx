@@ -14,7 +14,7 @@ const blogPosts = [
       author: "Nishant Singh ",
       likes:  50,
       imgUrl:
-        "https://media.geeksforgeeks.org/img-practice/banner/diving-into-excel-thumbnail.png",
+        "https://images.unsplash.com/photo-1610552050890-fe99536c2615?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8bGFuZHNjYXBlJTIwbmF0dXJlfGVufDB8fDB8fHww&auto=format&fit=crop&w=400&q=60",
     },
     {
       id: 1,
@@ -32,7 +32,7 @@ const blogPosts = [
       author: "Suresh Kr",
       likes: 17,
       imgUrl:
-        "https://media.geeksforgeeks.org/img-practice/banner/coa-gate-2022-thumbnail.png",
+        "https://images.unsplash.com/photo-1463288889890-a56b2853c40f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8bGFuZHNjYXBlJTIwbmF0dXJlfGVufDB8fDB8fHww&auto=format&fit=crop&w=400&q=60",
     },
     {
       id: 2,
@@ -47,7 +47,7 @@ const blogPosts = [
       author: "Monu Kr",
       likes: 10,
       imgUrl:
-        "https://media.geeksforgeeks.org/img-practice/banner/google-test-series-thumbnail.png",
+        "https://images.unsplash.com/photo-1628087236657-0cc963ad15fd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fGxhbmRzY2FwZSUyMG5hdHVyZXxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=400&q=60",
     },
     {
       id: 3,
@@ -65,7 +65,7 @@ const blogPosts = [
       author: "Sonu Kr",
       likes: 7,
       imgUrl:
-        "https://media.geeksforgeeks.org/img-practice/banner/cp-maths-java-thumbnail.png",
+        "https://images.unsplash.com/photo-1618477202872-89cec6f8d62e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fGxhbmRzY2FwZSUyMG5hdHVyZXxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=400&q=60",
     },
     {
       id: 4,
@@ -83,7 +83,7 @@ const blogPosts = [
       author: "Sonu Kr",
       likes: 19,
       imgUrl:
-        "https://media.geeksforgeeks.org/img-practice/banner/cp-maths-java-thumbnail.png",
+        "https://plus.unsplash.com/premium_photo-1669863280125-7789ef60adc0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTl8fGxhbmRzY2FwZSUyMG5hdHVyZXxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=400&q=60",
     },
     {
       id: 5,
@@ -101,7 +101,7 @@ const blogPosts = [
       author: "Sonu Kr",
       likes: 18,
       imgUrl:
-        "https://media.geeksforgeeks.org/img-practice/banner/cp-maths-java-thumbnail.png",
+        "https://images.unsplash.com/photo-1630246966103-22e603f58867?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzR8fGxhbmRzY2FwZSUyMG5hdHVyZXxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=400&q=60",
     },
     {
       id: 6,
@@ -118,7 +118,7 @@ const blogPosts = [
       author: "Nishant Singh ",
       likes:  50,
       imgUrl:
-        "https://media.geeksforgeeks.org/img-practice/banner/diving-into-excel-thumbnail.png",
+        "https://plus.unsplash.com/premium_photo-1669867124806-f84dd1a9e87c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mzd8fGxhbmRzY2FwZSUyMG5hdHVyZXxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=400&q=60",
     },
     {
       id: 7,
@@ -136,7 +136,7 @@ const blogPosts = [
       author: "Suresh Kr",
       likes: 17,
       imgUrl:
-        "https://media.geeksforgeeks.org/img-practice/banner/coa-gate-2022-thumbnail.png",
+        "https://images.unsplash.com/photo-1625158467818-8fe663b52e63?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDB8fGxhbmRzY2FwZSUyMG5hdHVyZXxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=400&q=60",
     },
     {
       id: 8,
@@ -152,7 +152,7 @@ const blogPosts = [
       author: "Monu Kr",
       likes: 10,
       imgUrl:
-        "https://media.geeksforgeeks.org/img-practice/banner/google-test-series-thumbnail.png",
+        "https://images.unsplash.com/photo-1609678816248-132228a8658b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NTB8fGxhbmRzY2FwZSUyMG5hdHVyZXxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=400&q=60",
     },
     {
       id: 9,
@@ -170,7 +170,7 @@ const blogPosts = [
       author: "Sonu Kr",
       likes: 7,
       imgUrl:
-        "https://media.geeksforgeeks.org/img-practice/banner/cp-maths-java-thumbnail.png",
+        "https://images.unsplash.com/photo-1616919954110-a94268e70f6d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NTd8fGxhbmRzY2FwZSUyMG5hdHVyZXxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=400&q=60",
     },
     {
       id: 10,
@@ -188,7 +188,7 @@ const blogPosts = [
       author: "Sonu Kr",
       likes: 19,
       imgUrl:
-        "https://media.geeksforgeeks.org/img-practice/banner/cp-maths-java-thumbnail.png",
+        "https://images.unsplash.com/photo-1608536429951-212ed92d1aca?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NjB8fGxhbmRzY2FwZSUyMG5hdHVyZXxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=400&q=60",
     },
     {
       id: 11,
@@ -206,7 +206,7 @@ const blogPosts = [
       author: "Sonu Kr",
       likes: 18,
       imgUrl:
-        "https://media.geeksforgeeks.org/img-practice/banner/cp-maths-java-thumbnail.png",
+        "https://images.unsplash.com/photo-1609412058473-c199497c3c5d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nzd8fGxhbmRzY2FwZSUyMG5hdHVyZXxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=400&q=60",
     },
   ];
   export default blogPosts;

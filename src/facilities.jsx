@@ -1,7 +1,7 @@
 const facilities=[
     {
         id: 0,
-        heading:"The Club",
+        heading:"The Club House",
         content:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate v.... Read More",
         image: "",
         location: "",
@@ -36,7 +36,21 @@ const facilities=[
     },
     {
         id: 5,
-        heading:"Society Hall",
+        heading:"Shopping Complex",
+        content:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate v.... Read More",
+        image: "",
+        location: "",
+    },
+    {
+        id: 6,
+        heading:"Security office",
+        content:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate v.... Read More",
+        image: "",
+        location: "",
+    },
+    {
+        id: 7,
+        heading:"Society office",
         content:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate v.... Read More",
         image: "",
         location: "",

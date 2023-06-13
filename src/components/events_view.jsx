@@ -6,12 +6,14 @@ import event_arrow_left from "./images/thunderbolt-icon-left.png";
 import event_arrow_right from "./images/thunderbolt-icon-right.png";
 import send from "./images/paper-plane-icon.png";
 import { Link } from "react-router-dom";
+import comments from "../event_comments.jsx";
+
 function Events_View() {
   return (
     <div>
       <div className="event_view_image">image</div>
       <div id="flex-row">
-        <div style={{ width: "80%", padding: "2%" }}>
+        <div style={{ width: "100%", padding: "2%" }}>
           <div id="flex-row">
             <img src={prev} alt="previous page" className="side_icons"></img>
             <Link to="/home">
@@ -58,20 +60,21 @@ function Events_View() {
             <hr></hr> <b>organizer:</b> organizer_name
           </div>
         </div>
-        <div style={{ width: "20em", margin: "0 0.5em", padding: "1%" }}>
+        <div  style={{width:"40%"}}>
           <h2>comments</h2>
           <div id="flex-row" className="comment">
             <input type="text" placeholder="comment" className="comment_box" />
             <img src={send} alt="send" id="small-icon"></img>
           </div>
           <div style={{ marginTop: "3em" }}>
-            commentsLorem Ipsum is simply dummy text of the printing and
-            typesetting industry. Lorem Ipsum has been the industry's standard
-            dummy text ever since the 1500s, when an unknown printer took a
-            galley of type and scrambled it to make a type specimen book. It has
-            survived not only five centuries, but also the leap into electronic
-            typesetting, remaining essentially unchanged. It was popularised in
-            the 1960s
+            <div>
+            {comments.map((comment) => (
+                <div id="flex-row" style={{ background: "#d9d9d9", padding:"1em" , margin:"10px"}}>
+                  <img src={comment.image} style={{width:"8em", height:"4em",borderRadius:"50%", background:"#1b425f",margin:"5px"}}></img>
+                  <div>{comment.content}</div>
+                </div>
+                ))}
+            </div>
           </div>
         </div>
       </div>

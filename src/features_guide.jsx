@@ -1,32 +1,65 @@
 const features_guide=[
     {
         id: 0,
-        heading:"How to do payment :",
+        img:[
+            ""
+        ],
+        about:"to pay and manage society bills",
+        heading:"Pay Maintenance Bills",
         content:"Managing the society can be a tricky task.  The management requires the communication between all the members of the group efficiently "
     },
     {
         id:1,
-        heading:": How to vote in committe elections",
+        img:[
+            ""
+        ],
+        about:"vote in society election",
+        heading:"Society Elections",
         content:"Managing the society can be a tricky task.  The management requires the communication between all the members of the group efficiently "
     },
     {
         id: 2,
-        heading:"How to be updated about events :",
+        img:[
+            ""
+        ],
+        about:"address the whole society aboout events",
+        heading:"Inform About Events",
         content:"Managing the society can be a tricky task.  The management requires the communication between all the members of the group efficiently "
     },
     {
         id: 3,
-        heading:": Send complaint letters to authorities",
+        img:[
+            ""
+        ],
+        about:"locate important places in society",
+        heading:"Location by Maps",
         content:"Managing the society can be a tricky task.  The management requires the communication between all the members of the group efficiently "
     },
     {
         id: 4,
-        heading:"Create & see Blogs to save memories :",
+        img:[
+            ""
+        ],
+        about:"let society member interact",
+        heading:"Share Blogs",
         content:"Managing the society can be a tricky task.  The management requires the communication between all the members of the group efficiently "
     },
     {
         id: 5,
-        heading:": Give invitations to whole society members",
+        img:[
+            ""
+        ],
+        about:"let authorities know about problems",
+        heading:"Grievance to authority",
+        content:"Managing the society can be a tricky task.  The management requires the communication between all the members of the group efficiently "
+    },
+    {
+        id: 6,
+        img:[
+            ""
+        ],
+        about:"conduct fair elections",
+        heading:"Get election results",
         content:"Managing the society can be a tricky task.  The management requires the communication between all the members of the group efficiently "
     },
     
