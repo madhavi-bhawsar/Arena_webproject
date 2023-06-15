@@ -1,26 +1,22 @@
 const event_comment=[
     {
-        id: 0,
         name:"Nayan Naidu",
-        content:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore ",
+        content:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do .",
         image: "",
     },
     {
-        id: 1,
         name:"John Doe",
-        content:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore ",
+        content:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. ",
         image: "",
     },
     {
-        id: 2,
         name:"Seema Rama",
-        content:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore ",
+        content:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. ",
         image: "",
     },
     {
-        id: 3,
         name:"Rose flin",
-        content:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore ",
+        content:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. ",
         image: "",
     },
 ];

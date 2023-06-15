@@ -161,7 +161,7 @@ function Campaign() {
                               <img
                                 src={candidate.pic}
                                 alt="candidate"
-                                style={{width:"300px", height:"300px"}}
+                                style={{width:"100%", height:"300px"}}
                               />
                             </div>
                           </div>

@@ -4,10 +4,12 @@ import features_guide from "../features_guide.jsx";
 import { Link } from "react-router-dom";
 import society_images from "../society_pics.jsx";
 import ImageViewer from "../carousel_image.jsx";
+import MyMap from "./Map.jsx";
 
 function Navibar() {
   const [selectedFeatures, setSelectedFeatures] = useState([]);
   const selectedFeatureRef = useRef(null);
+  const societylocation = [22.969428755832723, 75.73182858758516];
 
   const handleFeatureClick = (feature) => {
     if (!selectedFeatures.includes(feature)) {
@@ -61,7 +63,14 @@ function Navibar() {
             }}
           >
             <div
-              style={{ height: "30em", width: "50%", background: "url("+"https://images.unsplash.com/photo-1560790671-b76ca4de55ef?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8Zmxvd2VyfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60"+")" }}
+              style={{
+                height: "30em",
+                width: "50%",
+                background:
+                  "url(" +
+                  "https://images.unsplash.com/photo-1560790671-b76ca4de55ef?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8Zmxvd2VyfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60" +
+                  ")",
+              }}
             ></div>
             <div style={{ width: "50%", marginLeft: "4%" }}>
               <h1>What's new:</h1>
@@ -78,8 +87,7 @@ function Navibar() {
           </div>
         </div>
         <div>
-          <div className="front_gradient"
-          >
+          <div className="front_gradient">
             <div>
               <h1>Features to help:</h1>
               <br />
@@ -138,7 +146,7 @@ function Navibar() {
         </div>
         <div
           style={{
-            padding: "5em 7%",
+            padding: "60px 7%",
             background: "#EBEDEE",
             height: "57em",
           }}
@@ -155,24 +163,33 @@ function Navibar() {
               backgroundRepeat: "no-repeat",
               backgroundSize: "cover",
               padding: "10px",
+              height:"50em"
             }}
           >
             <div>
               <div id="flex-row">
-              <h1 className="title">About us</h1>
-              <i class="fa fa-map-marker" aria-hidden="true" style={{fontSize:"3em", marginLeft:"70%"}}></i>
-              </div>
-              <p>
                 <div>
                   <div
                     style={{
-                      margin: "10px",
+                      margin: "20px 10px",
                       float: "left",
                     }}
                   >
                     <ImageViewer images={society_images} />
                   </div>
+                  <div
+                    style={{
+                      height: "auto",
+                      width: "30em",
+                      margin:"10px"
+                    }}
+                  >
+                    <MyMap location={societylocation} />
+                  </div>
                 </div>
+                <p>
+                  
+              <h1 className="title" style={{textAlign:"right"}}>About us</h1>
                 In the sprawling landscape of India, there exists a society
                 where people live amidst a plethora of modern conveniences and
                 amenities. This society serves as a testament to the progress
@@ -221,11 +238,11 @@ function Navibar() {
                 the progress and modernity of India while maintaining the warmth
                 and cultural heritage that make the country unique.
               </p>
+              </div>
             </div>
           </div>
         </div>
-        <div className="front_gradient"
-        >
+        <div className="front_gradient">
           <h2>Our Team</h2>
           <div className="team-members">
             <div className="team-member">
@@ -262,32 +279,33 @@ function Navibar() {
             padding: "5em 15%",
             background: "#EBEDEE",
             height: "20em",
-            color:"gray"
+            color: "gray",
           }}
         >
-            <h1><b>Numbers Speak Louder</b></h1><br></br>
-            <div id="flex-row">
-                <div className="spaceven">
-                    <h2>1500+</h2>
-                    <h5>families</h5>
-                </div>
-                <div className="spaceven">
-                    <h2>2000+</h2>
-                    <h5>Houses</h5>
-                </div>
-                <div className="spaceven">
-                    <h2>5000+</h2>
-                    <h5>Login</h5>
-                </div>
-                <div className="spaceven">
-                    <h2>50000+</h2>
-                    <h5>members</h5>
-                </div>
+          <h1>
+            <b>Numbers Speak Louder</b>
+          </h1>
+          <br></br>
+          <div id="flex-row">
+            <div className="spaceven">
+              <h2>1500+</h2>
+              <h5>families</h5>
             </div>
+            <div className="spaceven">
+              <h2>2000+</h2>
+              <h5>Houses</h5>
             </div>
-            
+            <div className="spaceven">
+              <h2>5000+</h2>
+              <h5>Login</h5>
+            </div>
+            <div className="spaceven">
+              <h2>50000+</h2>
+              <h5>members</h5>
+            </div>
+          </div>
+        </div>
       </div>
-
     </div>
   );
 }

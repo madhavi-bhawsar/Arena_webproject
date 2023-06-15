@@ -18,7 +18,7 @@
 }
 
 #blog-nav {
-  height: 6em;
+  height: 7em;
   background: #c3d8d9;
 }
 
@@ -131,7 +131,7 @@
 .welcome {
   width: 1050px;
   height: 500px;
-  margin-top: 170px;
+  margin-top: 150px;
   margin-bottom: 50px;
 }
 
@@ -459,7 +459,6 @@ hr {
   border-width: 0;
   margin-left: 40%;
   font-family: "Cormorant Upright";
-  font-style: normal;
   font-weight: 400;
   font-size: 22px;
   line-height: 39px;
@@ -476,7 +475,7 @@ hr {
 }
 
 .event_view_image {
-  margin: 2.5em 7%;
+  margin: 4em 7%  0px;
   width: 1300px;
   height: 500px;
   background: #d9d9d9;
@@ -571,31 +570,13 @@ hr {
 }
 .blog-scroll {
   text-align: center;
-  overflow-y: scroll;
-  margin-top: 2em;
-  height: 88%;
+  margin-top: 95px;
+  height: 620px;
+  padding: 10px;
   font-family: "Beau Rivage", cursive;
   font-size: 3em;
   color: #000000;
-  background: url("https://images.unsplash.com/photo-1522441815192-d9f04eb0615c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NzZ8fGJhY2slMjBncm91bmQlMjBuYXR1cmV8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60")
-    no-repeat;
-  object-fit: cover;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-.blog_quote {
-  text-align: center;
-  width: 50%;
-  height: 30%;
-  padding-left: 10px;
-  padding-right: 10px;
-  position: absolute;
-  left: 9em;
-  top: 5em;
-}
-.quote-container {
-  position: relative;
+  overflow-y: scroll;
 }
 
 .carousel_blog {
@@ -631,11 +612,6 @@ hr {
   padding: 30px;
 }
 
-.event {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 0.25fr));
-  gap: 40px;
-}
 
 .blog {
   display: grid;
@@ -677,7 +653,7 @@ hr {
 
 .videonav {
   width: 100%;
-  height: 20em;
+  height: 18em;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -703,8 +679,8 @@ video {
   display: flex;
   color: white;
   top: 2em;
-  right: 3em;
-  width: 25em;
+  right: 4em;
+  width: 20em;
   justify-content: space-between;
 }
 .heading_prime {
@@ -1025,4 +1001,33 @@ body {
   height: auto;
   padding: 3em 15%;
   color: white;
+}
+
+.blog-nav2{
+  margin: 0px auto;
+  width:auto;
+  height:40px;
+  display: flex;
+}
+#blog-nav2-button{
+  width:7em;
+  margin:4px;
+  font-family: "Beau Rivage", cursive;
+  font-size: 30px;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.active{
+  background-color: #39a0a1;
+}
+.event-link{
+  font-family: "Cormorant Upright";
+  font-weight: 400;
+  font-size: 20px;
+  text-align: center;
+}
+
+.no-underline {
+  text-decoration: none;
+  color: #000;
 }

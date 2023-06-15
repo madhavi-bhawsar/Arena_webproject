@@ -1,3 +1,5 @@
+
+
 import React, { useState,useEffect } from "react";
 import { Link } from "react-router-dom";
 import Nav from "./nav.jsx";
@@ -80,11 +82,10 @@ function Vote() {
           </div>
           <div>
             <div id="side_box">
-              {/* Render the image */}
-              <img src={candidate.pic} alt="candidate_picture" />
+              <img src={candidate.pic} alt="candidate" style={{height:"100%", width:"100%"}}/>
             </div>
             {voted ? (
-              <div className="thanks-message">Thanks for voting!</div>
+              <b>Thanks for voting!</b>
             ) : (
               <button
                 className="blue-button"
@@ -195,7 +196,7 @@ function Vote() {
                         }}
                         key={candidate.id}
                       >
-                        <img src={candidate.pic} alt="candidate_picture" />
+                        <img src={candidate.pic} alt="candidate" />
                         <div className="content">{candidate.name}</div>
                         <b>{candidate.position}</b>
                         <button
@@ -218,6 +219,13 @@ function Vote() {
 }
 
 export default Vote;
+
+
+
+
+
+
+
 
 // import React, { useState } from "react";
 // import { Link } from "react-router-dom";

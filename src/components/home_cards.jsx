@@ -35,20 +35,12 @@ function Home_Cards() {
           <div className="content">{content}</div>
           <div>
             <div id="side_box">
-              {/* <img
-                src={left_triangle}
-                alt="prev img"
-                id="small-icon"
-                className="panel-icons"
+              <img
+                src={image}
+                alt={heading}
+                style={{width:"100%", height:"100%"}}
                 onClick={() => changeFacility("prev")}
-              /> */}
-              {/* <img
-                src={right_triangle}
-                alt="next img"
-                id="small-icon"
-                className="panel-icons"
-                onClick={() => changeFacility("next")}
-              /> */}
+              />
             </div>
             <img src={world_map} alt="locate office" className="map-icons" />
           </div>

@@ -1,21 +1,41 @@
-import React from "react";
+import React, { useState } from "react";
+import { Link, useParams } from "react-router-dom";
 import home from "./images/home-icon.png";
 import prev from "./images/previous-button-icon.png";
-import emoji from "./images/smiling-line-icon.png";
-import event_arrow_left from "./images/thunderbolt-icon-left.png";
-import event_arrow_right from "./images/thunderbolt-icon-right.png";
 import send from "./images/paper-plane-icon.png";
-import { Link } from "react-router-dom";
-import comments from "../event_comments.jsx";
+import eventPosts from "../event_doc";
 
-function Events_View() {
+function EventView() {
+  const { id } = useParams();
+  const event = eventPosts.find((event) => event.id === parseInt(id));
+
+  const [count, setCount] = useState(0);
+
+  const handleIncrease = () => {
+    if (count < event.comments.length) {
+      setCount(count + 1);
+    }
+  };
+
+  const handleDecrease = () => {
+    if (count > 0) {
+      setCount(count - 1);
+    }
+  };
+
+  if (!event) {
+    return <div>Event not found</div>;
+  }
+
   return (
     <div>
-      <div className="event_view_image">image</div>
+      <div >
+        <img src={event.image} alt={event.title} className="event_view_image"/>
+      </div>
       <div id="flex-row">
         <div style={{ width: "100%", padding: "2%" }}>
           <div id="flex-row">
-            <img src={prev} alt="previous page" className="side_icons"></img>
+            <img src={prev} alt="previous page" className="side_icons" />
             <Link to="/home">
               <img
                 src={home}
@@ -24,9 +44,9 @@ function Events_View() {
                 style={{
                   marginLeft: "1em",
                 }}
-              ></img>
+              />
             </Link>
-            <div className="title">The Event title</div>
+            <div className="title">{event.title}</div>
           </div>
           <div
             style={{
@@ -35,46 +55,77 @@ function Events_View() {
               textAlign: "center",
             }}
           >
-            A commity event
+            {event.category}
           </div>
-          <hr></hr>
+          <hr />
           <h5>When and where:</h5>
           <div id="flex-row">
             <div className="whenhere">
-              <b>Event_date</b>
+              <b>{event.date}</b>
             </div>
+            {event.passes && (
             <div className="whenhere">
-              <b>event_place</b>
+              <b>{event.place}</b>
             </div>
+            )}
           </div>
-          <div className="content">
-            event_content "Lorem Ipsum is simply dummy text of the printing and
-            typesetting industry. Lorem Ipsum has been the industry's standard
-            dummy text ever since the 1500s, when an unknown printer took a
-            galley of type and scrambled it to make a type specimen book. It has
-            survived not only five centuries, but also the leap into electronic
-            typesetting, remaining essentially unchanged. It was popularised in
-            the 1960s with the release of Letraset sheets containing Lorem Ipsum
-            passages, and more recently with desktop publishing software like
-            Aldus PageMaker including versions of Lorem Ipsum."
-            <hr></hr> <b>organizer:</b> organizer_name
-          </div>
+          <div className="content">{event.content}</div>
+          {event.passes && (
+            <div className="left-authority-card" style={{ padding: "1em" }}>
+              <div id="flex-row">
+                <div style={{ width: "22em" }}>
+                  <div className="nav-links">
+                    <b>{event.title}</b>
+                  </div>
+                  <hr />
+                  <br></br>
+                  Number of passes:
+                  <br></br>
+                  <button onClick={handleDecrease}>-</button>
+                  <input
+                    type="number"
+                    style={{ height: "2em", width: "10em", background: "#f6d7ca" }}
+                    value={count}
+                    readOnly
+                  />
+                  <button onClick={handleIncrease}>+</button>
+                </div>
+                <div className="content" style={{ textAlign: "center" }}>
+                  <br />
+                  <b>{event.date}</b>
+                  <br />
+                  Please mark your presence at <b>{event.place}</b>
+                  <br />
+                  Organized by {event.organizer}
+                  <br />
+                  A {event.category} event
+                  <br />
+                </div>
+              </div>
+            </div>
+          )}
         </div>
-        <div  style={{width:"40%"}}>
-          <h2>comments</h2>
+        <div style={{ width: "40%" , marginTop:"140px" }}>
+          <h2>Comments</h2>
           <div id="flex-row" className="comment">
-            <input type="text" placeholder="comment" className="comment_box" />
-            <img src={send} alt="send" id="small-icon"></img>
+            <input type="text" placeholder="Comment" className="comment_box" />
+            <img src={send} alt="send" id="small-icon" />
           </div>
           <div style={{ marginTop: "3em" }}>
-            <div>
-            {comments.map((comment) => (
-                <div id="flex-row" style={{ background: "#d9d9d9", padding:"1em" , margin:"10px"}}>
-                  <img src={comment.image} style={{width:"8em", height:"4em",borderRadius:"50%", background:"#1b425f",margin:"5px"}}></img>
-                  <div>{comment.content}</div>
-                </div>
-                ))}
-            </div>
+            {event.comments.slice(0, 8).map((comment, index) => (
+              <div
+                key={index}
+                style={{
+                  background: "#d9d9d9",
+                  padding: "5px",
+                  margin: "10px",
+                }}
+              >
+                <b>{comment.name}</b>
+                <br />
+                {comment.comment_content}
+              </div>
+            ))}
           </div>
         </div>
       </div>
@@ -82,57 +133,263 @@ function Events_View() {
   );
 }
 
-export default Events_View;
+export default EventView;
 
-// import React from "react";
+// import React, { useState } from "react";
+// import { Link, useParams } from "react-router-dom";
 // import home from "./images/home-icon.png";
 // import prev from "./images/previous-button-icon.png";
-// import emoji from "./images/smiling-line-icon.png";
-// import event_arrow_left from "./images/thunderbolt-icon-left.png";
-// import event_arrow_right from "./images/thunderbolt-icon-right.png";
 // import send from "./images/paper-plane-icon.png";
-// import { Link } from 'react-router-dom';
-// function Events_View() {
+// import eventPosts from "../event_doc";
+
+// function EventView() {
+//   const { id } = useParams();
+//   const event = eventPosts.find((event) => event.id === parseInt(id));
+
+//   const [count, setCount] = useState(0);
+
+//   const handleIncrease = () => {
+//     if (count < event.comments.length) {
+//       setCount(count + 1);
+//     }
+//   };
+
+//   const handleDecrease = () => {
+//     if (count > 0) {
+//       setCount(count - 1);
+//     }
+//   };
+
+//   if (!event) {
+//     return <div>Event not found</div>;
+//   }
+
 //   return (
 //     <div>
-//       <img
-//         src={event_arrow_left}
-//         alt="previous"
-//         className="icons"
-//         id="event_left_arrow"
-//       ></img>
-//       <div className="event_viewer">
-//         <div id="flex-row">
-//           <img
-//             src={prev}
-//             alt="previous page"
-//             className="icons"
-//             id="event_left_pic"
-//           ></img>
-//           <div className="title">The group name</div>
-//           <Link to="/home">
-//           <img
-//             src={home}
-//             alt="home"
-//             className="icons"
-//             id="event_right_pic"
-//           ></img>
-//           </Link>
+//       <div className="event_view_image">
+//         <img src={event.image} alt={event.title} />
+//       </div>
+//       <div id="flex-row">
+//         <div style={{ width: "100%", padding: "2%" }}>
+//           <div id="flex-row">
+//             <img src={prev} alt="previous page" className="side_icons" />
+//             <Link to="/home">
+//               <img
+//                 src={home}
+//                 alt="home"
+//                 className="side_icons"
+//                 style={{
+//                   marginLeft: "1em",
+//                 }}
+//               />
+//             </Link>
+//             <div className="title">{event.title}</div>
+//           </div>
+//           <div
+//             style={{
+//               backgroundColor: "#C3D8D9",
+//               fontSize: "20px",
+//               textAlign: "center",
+//             }}
+//           >
+//             {event.category}
+//           </div>
+//           <hr />
+//           <h5>When and where:</h5>
+//           <div id="flex-row">
+//             <div className="whenhere">
+//               <b>{event.date}</b>
+//             </div>
+//             <div className="whenhere">
+//               <b>{event.place}</b>
+//             </div>
+//           </div>
+//           <div className="content">{event.content}</div>
+//           <div className="left-authority-card" style={{ padding: "1em" }}>
+//             <div id="flex-row">
+//               <div>
+//                 <b>{event.title}</b>
+//                 <br />
+//                 {event.date}
+//                 <br />
+//                 {event.organizer}
+//                 <br />
+//                 {event.category}
+//                 <br />A committee event
+//               </div>
+//               <div>
+//                 <button onClick={handleDecrease}>-</button>
+//                 <input type="number" value={count} readOnly />
+//                 <button onClick={handleIncrease}>+</button>
+//               </div>
+//             </div>
+//           </div>
 //         </div>
-//         <div id="flex-row" className="comment">
-//           <img src={emoji} alt="react" id="small-icon" ></img>
-//           <input type="text" placeholder="comment" className="comment_box"/>
-//           <img src={send} alt="send" id="small-icon" ></img>
+//         <div style={{ width: "40%" }}>
+//           <h2>Comments</h2>
+//           <div id="flex-row" className="comment">
+//             <input type="text" placeholder="Comment" className="comment_box" />
+//             <img src={send} alt="send" id="small-icon" />
+//           </div>
+//           <div style={{ marginLeft: "10%", marginTop: "5%" }}>
+//             {event.comments.slice(0, count).map((comment, index) => (
+//               <div key={index} className="left-authority-card" style={{ margin: "1em 0" }}>
+//                 <b>{comment.name}</b>
+//                 <br />
+//                 {comment.comment_content}
+//               </div>
+//             ))}
+//           </div>
 //         </div>
 //       </div>
-//       <img
-//         src={event_arrow_right}
-//         alt="next"
-//         className="icons"
-//         id="event_right_arrow"
-//       ></img>
 //     </div>
 //   );
 // }
 
-// export default Events_View;
+// export default EventView;
+
+// import React, { useState } from "react";
+// import { Link, useParams } from "react-router-dom";
+// import home from "./images/home-icon.png";
+// import prev from "./images/previous-button-icon.png";
+// import send from "./images/paper-plane-icon.png";
+// import eventPosts from "../event_doc.jsx";
+
+// function EventView() {
+//   const { id } = useParams();
+//   const event = eventPosts.find((event) => event.id === parseInt(id));
+
+//   const [count, setCount] = useState(0);
+
+//   const handleIncrease = () => {
+//     if (count < 5) {
+//       setCount(count + 1);
+//     }
+//   };
+
+//   const handleDecrease = () => {
+//     if (count > 0) {
+//       setCount(count - 1);
+//     }
+//   };
+
+//   if (!event) {
+//     return <div>Event not found</div>;
+//   }
+
+//   return (
+//     <div>
+//       <div className="event_view_image">image</div>
+//       <div id="flex-row">
+//         <div style={{ width: "100%", padding: "2%" }}>
+//           <div id="flex-row">
+//             <img src={prev} alt="previous page" className="side_icons" />
+//             <Link to="/home">
+//               <img
+//                 src={home}
+//                 alt="home"
+//                 className="side_icons"
+//                 style={{
+//                   marginLeft: "1em",
+//                 }}
+//               />
+//             </Link>
+//             <div className="title">{event.title}</div>
+//           </div>
+//           <div
+//             style={{
+//               backgroundColor: "#C3D8D9",
+//               fontSize: "20px",
+//               textAlign: "center",
+//             }}
+//           >
+//             {event.category}
+//           </div>
+//           <hr />
+//           <h5>When and where:</h5>
+//           <div id="flex-row">
+//             <div className="whenhere">
+//               <b>{event.date}</b>
+//             </div>
+//             <div className="whenhere">
+//               <b>{event.place}</b>
+//             </div>
+//           </div>
+//           <div className="content">{event.content}</div>
+//           <div className="left-authority-card" style={{ padding: "1em" }}>
+//             <div id="flex-row">
+//               <div>
+//                 <b>{event.title}</b>
+//                 <br />
+//                 {event.date}
+//                 <br />
+//                 {event.organizer}
+//                 <br />
+//                 {event.category}
+//                 <br />A commity event
+//               </div>
+//               <div>
+//                 <button onClick={handleDecrease}>-</button>
+//                 <input type="number" value={count} readOnly />
+//                 <button onClick={handleIncrease}>+</button>
+//               </div>
+//             </div>
+//           </div>
+//         </div>
+//         <div style={{ width: "40%" }}>
+//           <h2>comments</h2>
+//           <div id="flex-row" className="comment">
+//             <input type="text" placeholder="comment" className="comment_box" />
+//             <img src={send} alt="send" id="small-icon" />
+//           </div>
+//           <div style={{ marginLeft: "10%", marginTop: "5%" }}>
+//             {event.comments.slice(0, count).map((comment, index) => (
+//               <div key={index} className="left-authority-card" style={{ margin: "1em 0" }}>
+//                 <b>{comment.name}</b>
+//                 <br />
+//                 {comment.comment_content}
+//               </div>
+//             ))}
+//           </div>
+//         </div>
+//       </div>
+//     </div>
+//   );
+// }
+
+// export default EventView;
+
+// // EventView.jsx
+// import React from "react";
+// import { Link, useParams } from "react-router-dom";
+// import eventPosts from "../event_doc.jsx";
+// import home from "./images/home-icon.png";
+// import prev from "./images/previous-button-icon.png";
+
+// const EventView = () => {
+//   const { id } = useParams();
+//   const event = eventPosts.find((event) => event.id === parseInt(id));
+
+//   if (!event) {
+//     return (
+//       <div>
+//         <Link to="/home">
+//           <img
+//             src={home}
+//             alt="home"
+//             style={{ height: "2.5em", width: "2.5em", marginTop: "0.75em" }}
+//           />
+//         </Link>
+//         <h1>Event not found</h1>
+//       </div>
+//     );
+//   }
+
+//   return (
+//     <h1>
+//       {id}
+//     </h1>
+//   );
+// };
+
+// export default EventView;

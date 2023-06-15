@@ -21,9 +21,9 @@ function Grievance_Page() {
                   style={{ width: "80%", marginLeft: "3em" }}
                 >
                   <option value="">Select a recipient</option>
-                  <option value="person1">Person 1</option>
-                  <option value="person2">Person 2</option>
-                  <option value="person3">Person 3</option>
+                  <option value="Secretory">Secretory</option>
+                  <option value="Cultural Head">Cultural Head</option>
+                  <option value="Security Head">Security Head</option>
                   {/* Add more options as needed */}
                 </select>
               </div>

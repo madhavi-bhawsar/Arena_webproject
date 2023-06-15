@@ -17,7 +17,7 @@ function Panel() {
         </Link>
       </div>
       <div id="panel">
-        <Link to="/event">
+        <Link to="/events">
           <img src={event} alt="events" className="panel-icons"></img>
         </Link>
       </div>

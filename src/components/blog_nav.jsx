@@ -9,9 +9,8 @@ const Frontpage_nav = () => {
       </video>
       <div className='heading_prime'>Blogs</div>
       <div className='vid_nav_flex'>
-        <h2><Link to="/home">Home</Link></h2>
-        <h2><Link to="/blogcreate">Create</Link></h2>
-        <h2><Link to="/guide">Guide</Link></h2>
+        <h2><Link to="/home" className='no-underline'>Home</Link></h2>
+        <h2><Link to="/blogcreate" className='no-underline'>Create</Link></h2>
       </div>
     </div>
   );

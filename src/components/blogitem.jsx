@@ -1,12 +1,15 @@
 import React, { useState } from "react";
+import { Link, useParams } from "react-router-dom";
 import home from "./images/home-icon.png";
 import prev from "./images/previous-button-icon.png";
-import blog from "../blog.jsx";
-import { Link } from "react-router-dom";
-import society_images from "../society_pics.jsx";
+import blogPosts from "../blog.jsx";
 import ImageViewer from "../carousel_image.jsx";
 
 function BlogView() {
+
+  const { id } = useParams();
+  const blog = blogPosts.find((blog) => blog.id === parseInt(id));
+
   const [mark, setmark] = useState(0),
     [ismark, setismark] = useState(false),
     onBookmarkClick = () => {
@@ -32,8 +35,8 @@ function BlogView() {
               <img src={home} alt="home" className="icons"></img>
             </Link>
           </div>
-          <div className="blog_head">
-            Idjkfyuehscyusdfvcn svds{blog.heading}
+          <div className="blog_head"><b>{blog.title}
+            </b>
           </div>
 
           <div className="left">
@@ -57,35 +60,18 @@ function BlogView() {
         </div>
         <div className="blog-scroll">
           <div>
+            <p>by {blog.author}</p>
             <div
               style={{
                 margin: "10px",
                 float: "left",
               }}
             >
-              <ImageViewer images={society_images} />
+              <ImageViewer images={blog.imgUrl} />
             </div>
           </div>
           <div className="blog_text">
-            t is a long established fact that a reader will be distracted by the
-            readable content of a page when looking at its layout. The point of
-            using Lorem Ipsum is that it has a more-or-less normal distribution
-            of letters, as opposed to using 'Content here, content here', making
-            it look like readable English. Many desktop publishing packages and
-            web page editors now use Lorem Ipsum as their default model text,
-            and a search for 'lorem ipsum' will uncover many web sites still in
-            their infancy. Various versions have evolved over the years,
-            sometimes by accident, sometimes on purpose (injected humour and the
-            like). t is a long established fact that a reader will be d
-            istracted by the readable con tent of a page when looking at its
-            layout. The point of using Lorem Ipsum is that it has a more-or-less
-            normal distribution of letters, as opposed to using 'Content here,
-            content here', making it look like readable English. Many desktop
-            publishing packages and web page editors now use Lorem Ipsum as
-            their default model text, and a search for 'lorem ipsum' will
-            uncover many web sites still in their infancy. Various versions have
-            evolved over the years, sometimes by accident, sometimes on purpose
-            (injected humour and the like)
+          {blog.body}
           </div>
           <hr></hr>
         </div>

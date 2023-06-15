@@ -4,7 +4,7 @@ import prev from "./images/previous-button-icon.png";
 import clip from "./images/paperclip-icon.png";
 import profile from "./images/person-profile-icon.png";
 import done from "./images/done-icon.png";
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
 
 function My_Blog() {
   return (
@@ -15,7 +15,9 @@ function My_Blog() {
             <img src={prev} alt="previous page" className="icons"></img>
           </div>
           <div className="right">
-          <Link to="/home"><img src={home} alt="home" className="icons"></img></Link>
+            <Link to="/home">
+              <img src={home} alt="home" className="icons"></img>
+            </Link>
           </div>
 
           <div>
@@ -26,7 +28,7 @@ function My_Blog() {
             />
           </div>
           <img src={done} alt="done" id="done"></img>
-          <div >
+          <div>
             <img src={clip} alt="attachment" className="icons"></img>
           </div>
           <div className="right">
@@ -35,15 +37,6 @@ function My_Blog() {
         </div>
 
         <div className="blog-scroll">
-        <div>
-            <input
-              type="text"
-              placeholder="Type summary qoute( max 200 char)"
-              className="blog_summary"
-              maxLength={200}
-            />
-          </div>
-          
           <textarea
             name="blog-content"
             placeholder="Type the blog here"
